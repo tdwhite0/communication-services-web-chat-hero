@@ -44,10 +44,10 @@ export const ErrorScreen = (props: ErrorEndCallProps): JSX.Element => {
             onClick={props.homeHandler}
           />
         </Stack>
-        {/* <div className={bottomStackFooterStyle}>
+        <div className={bottomStackFooterStyle}>
           <a href="https://github.com/Azure/Communication/issues">Give Feedback</a>
           &nbsp;on this sample app on Github
-        </div> */}
+        </div>
       </Stack>
     </Stack>
   );

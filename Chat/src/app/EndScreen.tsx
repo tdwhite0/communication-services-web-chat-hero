@@ -85,10 +85,10 @@ export const EndScreen = (props: EndCallProps): JSX.Element => {
             onClick={props.homeHandler}
           />
         </Stack>
-        {/* <div className={bottomStackFooterStyle}>
+        <div className={bottomStackFooterStyle}>
           <Link href={feedbackLink}>Give Feedback</Link>
           &nbsp;on this sample app at Microsoft Q&amp;A
-        </div> */}
+        </div>
       </Stack>
     </Stack>
   );
