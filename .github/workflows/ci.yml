@@ -29,20 +29,23 @@ jobs:
         run: |
           npm install
 
-      - name: Build backend
+      - name: Build app
         working-directory: ./Server
         shell: bash
         run: |
+          unset CI
+          npm run setup
           npm run build
+          npm run package
 
           
       - name: Run Azure webapp deploy action using publish profile credentials
         uses: azure/webapps-deploy@v2
-        with:
+        with: 
           app-name: twhite-azure-chat
           slot-name: Production
           publish-profile: ${{ secrets.PUBLISH_PROFILE }}
-          package: .
+          package: ./Chat/dist/
 
   clean-frontend:
     name: Run clean code tests on frontend
